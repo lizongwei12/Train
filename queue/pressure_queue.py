@@ -11,15 +11,12 @@ class PressureControlQueue(object):
     link_priority_queue = PriorityQueue()
     qsize = 0
 
-    
-    
     def __init__(self):
         self.__dict__ = self.__shared_state
         self._lock = threading.Lock()
         self._qsize_lock = threading.Lock()
         self._queue_lock = threading.Lock()
         self.tick_time = time.time()
-        
         
     def get(self):
         with self._lock:
@@ -52,5 +49,4 @@ class PressureControlQueue(object):
         if self.link_priority_queue.empty():
             return False
         return current >= self.link_priority_queue.queue[0].tick_time
-    
-    
+

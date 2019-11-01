@@ -1,12 +1,14 @@
 # -*- coding: utf-8 -*-
+from job.proxy_job import ProxyJob
+from settings import check_url,check_heades
 import sys
 sys.path.append('..')
 import threading
 import mycurl
-from job.proxy_job import ProxyJob
 import logging as log
-from settings import check_url,check_heades
 import json
+
+
 class ProxyCheckWorker(threading.Thread):
     """
         检测失败的代理是否可以重新使用
