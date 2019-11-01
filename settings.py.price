@@ -1,0 +1,114 @@
+# -*- coding: utf-8 -*-
+# 日志的类型
+# CATEGORY_LOG = 'dp-shop'
+CATEGORY_LOG = 'price-tc'
+#抓取间隔
+FREQUENCY_TIME = 0.2
+
+#是否需要增加日期
+DATE_NEED_ADD = True
+
+#是否使用代理
+IF_USE_PROXY = True
+
+#代理使用
+PROXY_FREQUENCY_TIME = 10
+
+#通信状态
+OK_CODE         = 200
+REDIRECT_CODE   = 302
+NO_CONTENT      = 204
+NOT_FOUND       = 404
+
+STATUS_OK           = 1
+STATUS_ERROR        = 2
+STATUS_NOT_FOUND    = 3
+
+# nice 最大值设置
+CATCH_NUM = 20
+
+DOWNLOAD_WORKERS_SIZE = 16
+EXTRACTOR_WORKERS_SIZE = 1
+PROXY_CHECKER_SIZE = 5
+LINKS_QUEUE_MIN_SIZE = 12288
+
+BATCH_ADD_LINKS_SIZE = 4096
+
+#代理检测链接
+check_url = "https://www.ly.com/uniontrain/trainapi/TrainPCCommon/SearchTrainRemainderTickets?callback=jQuery1830414364584783371_1499395892747&para={%22To%22:%22%E5%B9%BF%E5%B7%9E%22,%22From%22:%22%E5%93%88%E5%B0%94%E6%BB%A8%22,%22TrainDate%22:%222017-07-25%22,%22PassType%22:%22%22,%22TrainClass%22:%22%22,%22FromTimeSlot%22:%22%22,%22ToTimeSlot%22:%22%22,%22FromStation%22:%22%22,%22ToStation%22:%22%22,%22SortBy%22:%22fromTime%22,%22callback%22:%22%22,%22tag%22:%22%22,%22memberId%22:%220%22,%22headct%22:%220%22,%22platId%22:1,%22headver%22:%221.0.0%22,%22headtime%22:1499395893673}"
+
+# check_url = "http://mapi.dianping.com/searchshop.json?start=0&regionid=0&categoryid=10&cityid=2&locatecityid=2&maptype=0"
+# check_url = "http://catfront.dianping.com/api/batch?v=1&sdk=1.4.31"
+
+# check_heades  = [
+#     "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+#     "Accept-Language:zh-CN,zh;q=0.8,en;q=0.6"
+#     "Connection: close",
+#     "Host: www.dianping.com",
+#     "User-Agent:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36",
+#     "Upgrade-Insecure-Requests:1"]
+check_heades = [
+    "Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+    "Accept-Encoding:gzip, deflate, sdch",
+    "Accept-Language:zh-CN,zh;q=0.8,en;q=0.6",
+    "Cache-Control:max-age=0",
+    "Connection:keep-alive",
+    "Host: www.ly.com",
+    "Upgrade-Insecure-Requests:1",
+    "User-Agent:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36"
+]
+
+database = {
+    'host': '172.16.19.203',
+    'user': 'data',
+    'passwd': 'opensesame',
+    'db': 'img_upload'
+}
+#
+# database = {
+#     'host': '172.200.9.5',
+#     'user': 'root',
+#     'passwd': '123qwe',
+#     'db': 'acdb'
+# }
+# database = {
+#     'host': '192.100.2.31',
+#     'user': 'data',
+#     'passwd': 'opensesame',
+#     'db': 'traincrawler'
+# }
+
+DOWNLOAD_HEADERS = [
+    "Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+    "Accept-Encoding:gzip, deflate, sdch",
+    "Accept-Language:zh-CN,zh;q=0.8,en;q=0.6",
+    "Cache-Control:max-age=0",
+    "Connection:keep-alive",
+    "Host: www.ly.com",
+    "Upgrade-Insecure-Requests:1"
+]
+
+
+# DOWNLOAD_HEADERS = [
+#     "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+#     "Accept-Language:zh-CN,zh;q=0.8,en;q=0.6"
+#     "Connection: close",
+#     "Host: mapi.dianping.com",
+#     "Upgrade-Insecure-Requests:1"
+# ]
+
+# DOWNLOAD_HEADERS = [
+#     "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+#     "Accept-Language:zh-CN,zh;q=0.8,en;q=0.6"
+#     "Connection: close",
+#     "Host: www.dianping.com",
+#     "Upgrade-Insecure-Requests:1",
+#     "Cookie:_hc.v=\"\"8e472d46-41cf-4dbc-9267-63ffa3b49e8d.1495254300\"\"; PHOENIX_ID=0a010444-15c2419f777-f1114c8; JSESSIONID=3C6AC9006AD26231205475F2C61FA8FA; aburl=1; cy=2; cye=beijing; __mta=46464664.1495254306523.1495254306523.1495254306523.1"
+# ]
+
+
+PC_USER_AGENTS = [
+    "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36"
+]
+
+PC_USER_AGENTS_SUM = len(PC_USER_AGENTS)
